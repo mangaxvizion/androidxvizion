@@ -67,7 +67,7 @@ body::before{
 ══════════════════════════════════ */
 .sec-head{
   text-align:center;
-  padding:56px 0 8px;
+  padding:56px 0 32px;
   position:relative;
 }
 .sec-tag{
@@ -105,7 +105,7 @@ body::before{
   content:'';display:block;
   width:60px;height:2px;
   background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  margin:16px auto 0;
+  margin:4px auto 0;
   opacity:0;transition:opacity .7s .3s ease;
 }
 .sec-head.visible::after{opacity:1;}
@@ -263,13 +263,51 @@ body::before{
   font-size:10px;color:var(--gold-p);font-family:monospace;letter-spacing:.5px;
 }
 
-/* Tuto video */
+/* Tuto video 9:16 */
 .tuto-vid-wrap{
-  margin:0 20px 20px;border-radius:10px;overflow:hidden;
+  margin:0 auto 20px;
+  border-radius:10px;overflow:hidden;
   border:1px solid rgba(201,168,76,0.15);
   position:relative;
+  width:min(260px, 70%);
 }
-.tuto-vid-wrap .video-frame-wrap{padding-bottom:56.25%;}
+.tuto-vid-wrap .video-frame-wrap{padding-bottom:177.78%;}
+
+/* Bouton agrandir */
+.tuto-fullscreen-btn{
+  position:absolute;bottom:10px;right:10px;z-index:10;
+  width:38px;height:38px;border-radius:50%;
+  background:rgba(9,8,15,0.75);
+  border:1px solid rgba(201,168,76,0.4);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;backdrop-filter:blur(6px);
+  transition:background .2s ease,transform .2s ease;
+  box-shadow:0 2px 12px rgba(0,0,0,0.5);
+}
+.tuto-fullscreen-btn:hover{background:rgba(201,168,76,0.2);transform:scale(1.1);}
+.tuto-fullscreen-btn svg{width:16px;height:16px;fill:var(--gold);}
+
+/* Modale plein écran */
+.video-modal{
+  display:none;position:fixed;inset:0;z-index:9999;
+  background:rgba(0,0,0,0.95);
+  flex-direction:column;align-items:center;justify-content:center;
+}
+.video-modal.open{display:flex;}
+.video-modal-inner{
+  position:relative;
+  width:min(90vw, calc(90vh * 9/16));
+}
+.video-modal-inner .video-frame-wrap{padding-bottom:177.78%;}
+.video-modal-close{
+  position:absolute;top:-44px;right:0;
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;color:#fff;font-size:18px;line-height:1;
+  transition:background .2s;
+}
+.video-modal-close:hover{background:rgba(255,255,255,0.2);}
 
 /* ══════════════════════════════════
    SECTION 3 — SOCIAL PROOF CAROUSEL
@@ -591,7 +629,7 @@ body::before{
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
           <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
         </svg>
-        assistance? dm
+        Contactez-nous sur WhatsApp
       </a>
     </div>
   </div>
@@ -647,11 +685,30 @@ body::before{
       </div>
     </div>
 
-    <!-- Tuto video (même vidéo ou une autre) -->
-    <div class="tuto-vid-wrap">
+    <!-- Tuto video 9:16 -->
+    <div class="tuto-vid-wrap" id="tuto-vid-wrap">
       <div class="video-frame-wrap">
-        <iframe
+        <iframe id="tuto-iframe"
           src="https://cdn.shopify.com/videos/c/o/v/93d9c5f6910f4c12b78a9b25c0de5d72.mp4"
+          allow="autoplay"
+          allowfullscreen>
+        </iframe>
+      </div>
+      <button class="tuto-fullscreen-btn" id="tuto-fs-btn" title="Agrandir">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 3h6v2H5v4H3V3zm12 0h6v6h-2V5h-4V3zM3 15h2v4h4v2H3v-6zm16 4h-4v2h6v-6h-2v4z"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Modale vidéo plein écran -->
+  <div class="video-modal" id="video-modal">
+    <div class="video-modal-inner">
+      <div class="video-modal-close" id="modal-close">✕</div>
+      <div class="video-frame-wrap">
+        <iframe id="modal-iframe"
+          src=""
           allow="autoplay"
           allowfullscreen>
         </iframe>
@@ -849,10 +906,26 @@ body::before{
     numEl.textContent=(curr+1).toLocaleString('fr-FR');
   },12000);
 
-  /* ══ PHOTO CAROUSEL ══ */
-  var imgTrack = document.getElementById('img-car-track');
-  var imgs = imgTrack ? imgTrack.querySelectorAll('img') : [];
-  // Already handled by CSS animation
+  /* ══ TUTO VIDEO FULLSCREEN ══ */
+  var fsBtn = document.getElementById('tuto-fs-btn');
+  var modal = document.getElementById('video-modal');
+  var modalClose = document.getElementById('modal-close');
+  var modalIframe = document.getElementById('modal-iframe');
+  var tutoSrc = document.getElementById('tuto-iframe').src;
+
+  fsBtn.addEventListener('click', function(){
+    modalIframe.src = tutoSrc;
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+  function closeModal(){
+    modal.classList.remove('open');
+    modalIframe.src = '';
+    document.body.style.overflow = '';
+  }
+  modalClose.addEventListener('click', closeModal);
+  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
 
 })();
 </script>
