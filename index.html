@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -20,7 +20,7 @@ src="https://www.facebook.com/tr?id=963165246055842&ev=PageView&noscript=1"
 <!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aperçu & Installation du jeu</title>
+<title>Horny Union — Jeu Adulte Unique | Téléchargement Android</title>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -36,21 +36,18 @@ src="https://www.facebook.com/tr?id=963165246055842&ev=PageView&noscript=1"
   --text:#f0eadc;
   --text2:rgba(240,234,220,0.65);
   --text3:rgba(240,234,220,0.38);
+  --accent:#8b2fc9;
+  --accent2:#b44fff;
 }
-
 *{margin:0;padding:0;box-sizing:border-box;}
-
 html{scroll-behavior:smooth;}
-
 body{
   background:var(--dark);
   color:var(--text);
   font-family:'Raleway',sans-serif;
   overflow-x:hidden;
-  padding-bottom:100px;
+  padding-bottom:110px;
 }
-
-/* ── GRAIN OVERLAY ── */
 body::before{
   content:'';
   position:fixed;inset:0;
@@ -59,18 +56,69 @@ body::before{
   pointer-events:none;z-index:0;opacity:.7;
 }
 
-/* ── CONTAINER ── */
+/* ── HERO BANNER ── */
+.hero{
+  position:relative;z-index:1;
+  background:linear-gradient(180deg,rgba(9,8,15,0) 0%,var(--dark) 100%),
+    radial-gradient(ellipse at 50% 0%,rgba(139,47,201,0.18) 0%,transparent 70%);
+  text-align:center;
+  padding:48px 20px 28px;
+  border-bottom:1px solid rgba(201,168,76,0.1);
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;top:-60px;left:50%;transform:translateX(-50%);
+  width:500px;height:200px;
+  background:radial-gradient(ellipse,rgba(139,47,201,0.22) 0%,transparent 70%);
+  pointer-events:none;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:7px;
+  background:linear-gradient(90deg,rgba(139,47,201,0.2),rgba(201,168,76,0.15));
+  border:1px solid rgba(201,168,76,0.3);
+  padding:5px 16px;border-radius:30px;
+  font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold-p);margin-bottom:16px;
+  animation:tagPop .5s ease both;
+}
+@keyframes tagPop{from{opacity:0;transform:scale(.85);}to{opacity:1;transform:scale(1);}}
+.hero-logo{
+  font-family:'Cinzel',serif;
+  font-size:clamp(32px,7vw,52px);
+  font-weight:900;line-height:1.1;
+  background:linear-gradient(135deg,#fff 0%,var(--gold-p) 30%,var(--gold) 60%,var(--gold-l) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 30px rgba(201,168,76,0.45));
+  margin-bottom:8px;
+}
+.hero-sub{
+  font-size:12px;font-weight:400;color:var(--text2);
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:18px;
+}
+.hero-stars{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  margin-bottom:10px;
+}
+.hero-stars span{color:var(--gold);font-size:18px;letter-spacing:2px;}
+.hero-stars em{font-style:normal;font-size:11px;color:var(--text2);font-weight:600;}
+.hero-tags{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:7px;
+  margin-top:12px;
+}
+.hero-tag{
+  font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:3px 12px;border-radius:20px;
+  border:1px solid rgba(201,168,76,0.2);
+  background:rgba(201,168,76,0.06);color:var(--text3);
+}
+
+/* ── PAGE CONTAINER ── */
 .page{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:0 20px;}
 
-/* ══════════════════════════════════
-   SECTION TITLES — ANIMATED
-══════════════════════════════════ */
-.img-carousel-section{margin-top:0!important;}
-.sec-head{
-  text-align:center;
-  padding:56px 0 32px;
-  position:relative;
-}
+/* ── SECTION HEADERS ── */
+.sec-head{text-align:center;padding:48px 0 28px;position:relative;}
 .sec-tag{
   display:inline-block;
   font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;
@@ -81,250 +129,249 @@ body::before{
 }
 .sec-title{
   font-family:'Cinzel',serif;
-  font-size:clamp(22px,4.5vw,34px);
+  font-size:clamp(20px,4.5vw,32px);
   font-weight:900;line-height:1.15;
   background:linear-gradient(135deg,#fff 0%,var(--gold-p) 30%,var(--gold) 60%,var(--gold-l) 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
   filter:drop-shadow(0 0 20px rgba(201,168,76,0.35));
   margin-bottom:10px;
-  opacity:0;
-  transform:translateY(20px);
+  opacity:0;transform:translateY(20px);
   transition:opacity .7s ease,transform .7s ease;
 }
 .sec-title.visible{opacity:1;transform:translateY(0);}
-
 .sec-sub{
   font-size:13px;color:var(--text2);font-weight:300;letter-spacing:.8px;
-  max-width:500px;margin:0 auto;
+  max-width:520px;margin:0 auto;
   opacity:0;transform:translateY(14px);
   transition:opacity .7s .15s ease,transform .7s .15s ease;
 }
 .sec-sub.visible{opacity:1;transform:translateY(0);}
-
-/* underline déco */
 .sec-head::after{
   content:'';display:block;
   width:60px;height:2px;
   background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  margin:4px auto 0;
+  margin:14px auto 0;
   opacity:0;transition:opacity .7s .3s ease;
 }
 .sec-head.visible::after{opacity:1;}
 
-/* ══════════════════════════════════
-   SECTION 1 — APERÇU VIDÉO
-══════════════════════════════════ */
-.video-wrap{
-  position:relative;
-  border-radius:14px;
+/* ── IMAGE CAROUSEL (Screenshots) ── */
+.img-car-section{margin-bottom:0;}
+.img-car-wrap{
   overflow:hidden;
-  border:1px solid rgba(201,168,76,0.25);
-  box-shadow:
-    0 0 0 1px rgba(201,168,76,0.08),
-    0 8px 40px rgba(0,0,0,0.6),
-    0 0 60px rgba(201,168,76,0.08);
-  background:var(--surface);
-  opacity:0;transform:translateY(24px);
-  transition:opacity .8s ease,transform .8s ease;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);
+  border-radius:12px;
 }
-.video-wrap.visible{opacity:1;transform:translateY(0);}
-
-/* Barre déco top */
-.video-bar{
-  display:flex;align-items:center;gap:7px;
-  padding:11px 16px;
-  background:linear-gradient(90deg,var(--surface2),var(--surface));
-  border-bottom:1px solid rgba(201,168,76,0.12);
+.img-car-track{
+  display:flex;gap:12px;width:max-content;
+  animation:imgScroll 28s linear infinite;
 }
-.video-dot{width:10px;height:10px;border-radius:50%;}
-.video-dot:nth-child(1){background:#ff5f56;}
-.video-dot:nth-child(2){background:#febc2e;}
-.video-dot:nth-child(3){background:#27c93f;}
-.video-bar-title{
-  margin-left:8px;font-size:10px;font-weight:600;
-  letter-spacing:2px;color:var(--text3);text-transform:uppercase;
-}
-
-/* Video embed Google Drive */
-.video-frame-wrap{
-  position:relative;
-  padding-bottom:56.25%;
-  height:0;overflow:hidden;
-}
-.video-frame-wrap iframe{
-  position:absolute;top:0;left:0;
-  width:100%;height:100%;
-  border:none;
-}
-
-/* Overlay lecture */
-.video-overlay{
-  position:absolute;inset:0;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  background:linear-gradient(135deg,rgba(9,8,15,0.75),rgba(9,8,15,0.55));
-  cursor:pointer;
-  transition:background .3s ease;
-  z-index:2;
-}
-.video-overlay:hover{background:rgba(9,8,15,0.35);}
-.video-overlay.hidden{display:none;}
-
-.play-btn{
-  width:72px;height:72px;border-radius:50%;
-  background:linear-gradient(135deg,var(--gold),var(--gold-l));
-  display:flex;align-items:center;justify-content:center;
-  box-shadow:0 0 30px rgba(201,168,76,0.5),0 4px 20px rgba(0,0,0,0.4);
-  animation:playPulse 2.5s ease-in-out infinite;
-  transition:transform .2s ease;
-}
-.play-btn:hover{transform:scale(1.1);}
-.play-btn svg{width:26px;height:26px;fill:var(--dark);margin-left:4px;}
-
-@keyframes playPulse{
-  0%,100%{box-shadow:0 0 24px rgba(201,168,76,0.45),0 4px 18px rgba(0,0,0,0.4);}
-  50%    {box-shadow:0 0 44px rgba(201,168,76,0.7),0 4px 24px rgba(0,0,0,0.5);}
-}
-
-.play-label{
-  margin-top:14px;font-size:11px;font-weight:700;
-  letter-spacing:3px;text-transform:uppercase;
-  color:rgba(255,240,200,0.85);
-}
-
-/* Badges feature sous vidéo */
-.feat-row{
-  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;
-  padding:16px 16px 20px;
-  border-top:1px solid rgba(201,168,76,0.1);
-}
-.feat{
-  display:flex;align-items:center;gap:6px;
-  font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
-  color:var(--text3);
-}
-.feat span:first-child{font-size:13px;}
-
-/* ══════════════════════════════════
-   SECTION 2 — TUTO INSTALLATION
-══════════════════════════════════ */
-.tuto-wrap{
-  border-radius:14px;overflow:hidden;
+.img-car-track:hover{animation-play-state:paused;}
+.img-car-track img{
+  height:220px;width:auto;
+  border-radius:10px;
   border:1px solid rgba(201,168,76,0.2);
-  box-shadow:0 8px 40px rgba(0,0,0,0.5),0 0 50px rgba(201,168,76,0.06);
-  background:var(--surface);
+  object-fit:cover;
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
+  flex-shrink:0;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.img-car-track img:hover{
+  transform:scale(1.04);
+  box-shadow:0 0 20px rgba(201,168,76,0.3),0 6px 30px rgba(0,0,0,0.6);
+}
+@keyframes imgScroll{from{transform:translateX(0);}to{transform:translateX(-50%)}}
+
+/* ── DESCRIPTION DU JEU ── */
+.game-desc{
+  background:linear-gradient(135deg,var(--surface2),var(--surface));
+  border:1px solid rgba(201,168,76,0.2);
+  border-radius:14px;
+  padding:28px 24px;
+  box-shadow:0 8px 40px rgba(0,0,0,0.4),0 0 60px rgba(139,47,201,0.06);
   opacity:0;transform:translateY(24px);
   transition:opacity .8s ease,transform .8s ease;
+  margin-bottom:28px;
 }
-.tuto-wrap.visible{opacity:1;transform:translateY(0);}
-
-.tuto-header{
-  padding:18px 20px;
-  background:linear-gradient(90deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04));
-  border-bottom:1px solid rgba(201,168,76,0.15);
-  display:flex;align-items:center;gap:12px;
+.game-desc.visible{opacity:1;transform:translateY(0);}
+.game-desc-header{
+  display:flex;align-items:center;gap:14px;margin-bottom:18px;
+  padding-bottom:16px;border-bottom:1px solid rgba(201,168,76,0.12);
 }
-.tuto-icon{
-  width:36px;height:36px;border-radius:8px;
-  background:linear-gradient(135deg,var(--gold),var(--gold-l));
-  display:flex;align-items:center;justify-content:center;
-  font-size:16px;flex-shrink:0;
-}
-.tuto-header-text h3{
-  font-family:'Cinzel',serif;font-size:13px;font-weight:700;
-  color:var(--gold-p);letter-spacing:1px;
-}
-.tuto-header-text p{font-size:10px;color:var(--text3);margin-top:2px;letter-spacing:.8px;}
-
-/* Steps */
-.steps{padding:20px;}
-.step{
-  display:flex;gap:14px;padding:14px 0;
-  border-bottom:1px solid rgba(255,255,255,0.05);
-  opacity:0;transform:translateX(-16px);
-  transition:opacity .5s ease,transform .5s ease;
-}
-.step.visible{opacity:1;transform:translateX(0);}
-.step:last-child{border-bottom:none;}
-.step-num{
-  width:32px;height:32px;border-radius:50%;flex-shrink:0;
-  background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.05));
+.game-desc-icon{
+  width:48px;height:48px;border-radius:10px;flex-shrink:0;overflow:hidden;
   border:1px solid rgba(201,168,76,0.3);
-  display:flex;align-items:center;justify-content:center;
-  font-family:'Cinzel',serif;font-size:12px;font-weight:700;color:var(--gold);
+  box-shadow:0 0 16px rgba(139,47,201,0.3);
 }
-.step-body h4{
-  font-size:13px;font-weight:700;color:var(--text);
-  margin-bottom:4px;letter-spacing:.5px;
+.game-desc-icon img{width:100%;height:100%;object-fit:cover;}
+.game-desc-meta h3{
+  font-family:'Cinzel',serif;font-size:15px;font-weight:700;
+  color:var(--gold-p);letter-spacing:.5px;margin-bottom:3px;
 }
-.step-body p{font-size:11px;color:var(--text2);line-height:1.6;}
-.step-body code{
-  display:inline-block;margin-top:6px;
-  padding:3px 10px;border-radius:4px;
-  background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);
-  font-size:10px;color:var(--gold-p);font-family:monospace;letter-spacing:.5px;
+.game-desc-meta p{font-size:10px;color:var(--text3);letter-spacing:1px;}
+.rating-inline{display:flex;align-items:center;gap:5px;margin-top:4px;}
+.rating-inline span{color:var(--gold);font-size:12px;}
+.rating-inline em{font-style:normal;font-size:10px;color:var(--text3);}
+
+.game-desc-body{font-size:13px;color:var(--text2);line-height:1.75;margin-bottom:18px;}
+.game-desc-body strong{color:var(--text);font-weight:600;}
+
+.game-features{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px;
+}
+.game-feat-item{
+  display:flex;align-items:flex-start;gap:8px;
+  font-size:11px;color:var(--text2);line-height:1.5;
+}
+.game-feat-item .feat-ico{font-size:14px;flex-shrink:0;margin-top:1px;}
+
+.game-chars{
+  padding:14px;border-radius:10px;
+  background:rgba(139,47,201,0.07);
+  border:1px solid rgba(139,47,201,0.2);
+  margin-bottom:16px;
+}
+.game-chars-title{
+  font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent2);margin-bottom:10px;
+}
+.game-chars-list{
+  display:flex;flex-wrap:wrap;gap:7px;
+}
+.char-pill{
+  font-size:10px;font-weight:600;
+  padding:3px 12px;border-radius:20px;
+  background:rgba(139,47,201,0.15);
+  border:1px solid rgba(180,79,255,0.25);
+  color:rgba(240,234,220,0.75);
+  letter-spacing:.5px;
 }
 
-/* Tuto video 9:16 */
-.tuto-vid-wrap{
-  margin:0 auto 20px;
-  border-radius:10px;overflow:hidden;
+.game-badges{display:flex;flex-wrap:wrap;gap:8px;}
+.g-badge{
+  display:flex;align-items:center;gap:5px;
+  font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text3);border:1px solid rgba(201,168,76,0.15);
+  padding:4px 12px;border-radius:20px;
+  background:rgba(201,168,76,0.04);
+}
+
+/* ── DOWNLOAD CTA PROMINENT ── */
+.dl-main{
+  background:linear-gradient(135deg,rgba(139,47,201,0.12),rgba(9,8,15,0) 50%,rgba(201,168,76,0.08));
+  border:1px solid rgba(201,168,76,0.35);
+  border-radius:16px;
+  padding:28px 24px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(201,168,76,0.08),0 8px 40px rgba(0,0,0,0.5);
+  margin-bottom:28px;
+  opacity:0;transform:translateY(24px);
+  transition:opacity .8s ease,transform .8s ease;
+  position:relative;overflow:hidden;
+}
+.dl-main.visible{opacity:1;transform:translateY(0);}
+.dl-main::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,0.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.dl-main-label{
+  font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;opacity:.7;
+}
+.dl-main-title{
+  font-family:'Cinzel',serif;
+  font-size:clamp(18px,4vw,26px);
+  font-weight:900;line-height:1.2;
+  color:#fff;
+  margin-bottom:6px;
+  text-shadow:0 0 20px rgba(201,168,76,0.3);
+}
+.dl-main-sub{font-size:12px;color:var(--text2);margin-bottom:22px;line-height:1.6;}
+.dl-btn-big{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-l) 50%,var(--gold));
+  background-size:200% 100%;
+  color:var(--dark);
+  font-family:'Cinzel',serif;font-size:14px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  padding:16px 36px;border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 0 30px rgba(201,168,76,0.45),0 4px 20px rgba(0,0,0,0.4);
+  animation:shimmerBtn 3s ease-in-out infinite;
+  transition:transform .2s ease,box-shadow .2s ease;
+  position:relative;z-index:1;
+}
+.dl-btn-big:hover{
+  transform:scale(1.04) translateY(-2px);
+  box-shadow:0 0 50px rgba(201,168,76,0.65),0 8px 30px rgba(0,0,0,0.5);
+}
+.dl-btn-big svg{width:20px;height:20px;fill:var(--dark);flex-shrink:0;}
+@keyframes shimmerBtn{
+  0%,100%{background-position:0% 0;}
+  50%{background-position:100% 0;}
+}
+.dl-seals{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:12px;
+  margin-top:18px;
+}
+.dl-seal{font-size:10px;font-weight:600;color:var(--text3);letter-spacing:1px;}
+
+/* ── AVIS 5 ÉTOILES ── */
+.reviews-grid{
+  display:flex;flex-direction:column;gap:14px;
+  margin-bottom:10px;
+}
+.review-card{
+  background:linear-gradient(135deg,var(--surface2),var(--surface));
   border:1px solid rgba(201,168,76,0.15);
-  position:relative;
-  width:min(260px, 70%);
+  border-radius:12px;padding:18px 18px 16px;
+  box-shadow:0 4px 20px rgba(0,0,0,0.3);
+  opacity:0;transform:translateY(18px);
+  transition:opacity .6s ease,transform .6s ease;
 }
-.tuto-vid-wrap .video-frame-wrap{padding-bottom:177.78%;}
-
-/* Bouton agrandir */
-.tuto-fullscreen-btn{
-  position:absolute;bottom:10px;right:10px;z-index:10;
-  width:38px;height:38px;border-radius:50%;
-  background:rgba(9,8,15,0.75);
-  border:1px solid rgba(201,168,76,0.4);
+.review-card.visible{opacity:1;transform:translateY(0);}
+.review-top{display:flex;align-items:center;gap:12px;margin-bottom:10px;}
+.review-avatar{
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  overflow:hidden;border:2px solid rgba(201,168,76,0.3);
+  background:linear-gradient(135deg,rgba(139,47,201,0.3),rgba(201,168,76,0.2));
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;backdrop-filter:blur(6px);
-  transition:background .2s ease,transform .2s ease;
-  box-shadow:0 2px 12px rgba(0,0,0,0.5);
+  font-size:18px;
 }
-.tuto-fullscreen-btn:hover{background:rgba(201,168,76,0.2);transform:scale(1.1);}
-.tuto-fullscreen-btn svg{width:16px;height:16px;fill:var(--gold);}
+.review-avatar img{width:100%;height:100%;object-fit:cover;}
+.review-info-name{font-size:12px;font-weight:700;color:var(--text);letter-spacing:.5px;}
+.review-info-meta{font-size:10px;color:var(--text3);margin-top:2px;letter-spacing:.5px;}
+.review-stars{color:var(--gold);font-size:14px;letter-spacing:1px;}
+.review-verified{
+  margin-left:auto;
+  font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  color:rgba(50,200,80,.8);
+  border:1px solid rgba(50,200,80,.2);
+  padding:2px 8px;border-radius:10px;
+  background:rgba(50,200,80,.06);
+  white-space:nowrap;
+}
+.review-text{font-size:12px;color:var(--text2);line-height:1.7;}
+.review-img{
+  margin-top:12px;border-radius:8px;overflow:hidden;
+  border:1px solid rgba(201,168,76,0.15);
+  max-height:140px;
+}
+.review-img img{width:100%;height:140px;object-fit:cover;display:block;}
 
-/* Modale plein écran */
-.video-modal{
-  display:none;position:fixed;inset:0;z-index:9999;
-  background:rgba(0,0,0,0.95);
-  flex-direction:column;align-items:center;justify-content:center;
-}
-.video-modal.open{display:flex;}
-.video-modal-inner{
-  position:relative;
-  width:min(90vw, calc(90vh * 9/16));
-}
-.video-modal-inner .video-frame-wrap{padding-bottom:177.78%;}
-.video-modal-close{
-  position:absolute;top:-44px;right:0;
-  width:36px;height:36px;border-radius:50%;
-  background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);
-  display:flex;align-items:center;justify-content:center;
-  cursor:pointer;color:#fff;font-size:18px;line-height:1;
-  transition:background .2s;
-}
-.video-modal-close:hover{background:rgba(255,255,255,0.2);}
-
-/* ══════════════════════════════════
-   SECTION 3 — SOCIAL PROOF CAROUSEL
-══════════════════════════════════ */
+/* ── SOCIAL PROOF BOX ── */
 .proof-box{
   background:linear-gradient(135deg,var(--surface2),var(--surface));
   border:1px solid rgba(201,168,76,0.18);
   border-radius:14px;
-  padding:32px 24px 28px;
+  padding:28px 22px 24px;
   box-shadow:0 8px 36px rgba(0,0,0,0.4);
   opacity:0;transform:translateY(20px);
   transition:opacity .8s ease,transform .8s ease;
 }
 .proof-box.visible{opacity:1;transform:translateY(0);}
-
-/* Counter */
 .pf-ctr{display:flex;justify-content:center;align-items:baseline;gap:10px;margin-bottom:18px;}
 .pf-num{
   font-family:'Cinzel',serif;font-size:clamp(44px,8vw,58px);font-weight:900;line-height:1;
@@ -333,8 +380,6 @@ body::before{
   filter:drop-shadow(0 0 18px rgba(201,168,76,0.5));
 }
 .pf-nlabel{font-size:11px;font-weight:600;color:rgba(240,234,220,0.5);letter-spacing:2px;text-transform:uppercase;padding-bottom:6px;}
-
-/* Bar */
 .pf-bar{margin-bottom:20px;}
 .pf-bartop{display:flex;justify-content:space-between;margin-bottom:7px;}
 .pf-bll{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--text3);}
@@ -359,13 +404,10 @@ body::before{
   opacity:0;transition:opacity .6s;z-index:2;
 }
 .pf-urg{margin-top:7px;text-align:center;font-size:10px;font-weight:700;color:var(--red);letter-spacing:1.5px;text-transform:uppercase;opacity:0;transition:opacity .6s;}
-
-/* Carousel */
 .pf-sep{display:flex;align-items:center;gap:10px;margin:18px 0 12px;}
 .pf-sline{flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);}
 .pf-sico{font-size:9px;color:rgba(201,168,76,0.35);letter-spacing:3px;}
 .pf-ftitle{text-align:center;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--text3);margin-bottom:12px;}
-
 .car-wrap{
   overflow:hidden;
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);
@@ -373,357 +415,471 @@ body::before{
 }
 .car-track{display:flex;gap:9px;width:max-content;animation:scrollX 30s linear infinite;}
 .car-track:hover{animation-play-state:paused;}
-@keyframes scrollX{0%{transform:translateX(0);}100%{transform:translateX(-50%);}}
-
+@keyframes scrollX{from{transform:translateX(0);}to{transform:translateX(-50%)}}
 .car-card{
-  flex-shrink:0;display:flex;align-items:center;gap:9px;
-  padding:9px 13px;
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(201,168,76,0.15);
-  border-radius:8px;min-width:215px;max-width:235px;
-  position:relative;overflow:hidden;
+  display:flex;align-items:center;gap:10px;
+  background:var(--surface2);
+  border:1px solid rgba(201,168,76,0.1);
+  border-radius:10px;
+  padding:10px 14px;min-width:220px;max-width:240px;
+  transition:border-color .4s ease;
 }
-.car-card::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(180deg,var(--gold),transparent);opacity:.5;}
-.car-card-flag{font-size:17px;flex-shrink:0;}
+.car-card-flag{font-size:18px;flex-shrink:0;}
 .car-card-info{flex:1;min-width:0;}
 .car-card-email{font-size:11px;font-weight:600;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.car-card-meta{font-size:8px;color:var(--text3);letter-spacing:.8px;margin-top:2px;}
-.car-card-time{font-size:8px;font-weight:700;color:rgba(201,168,76,0.6);white-space:nowrap;flex-shrink:0;}
-.car-card-check{width:15px;height:15px;border-radius:50%;background:rgba(0,180,60,0.12);border:1px solid rgba(0,180,60,0.25);display:flex;align-items:center;justify-content:center;font-size:7px;color:rgba(0,200,70,0.85);flex-shrink:0;}
+.car-card-meta{font-size:9px;color:var(--text3);margin-top:2px;letter-spacing:.5px;}
+.car-card-time{font-size:9px;font-weight:700;letter-spacing:.5px;color:var(--text3);white-space:nowrap;margin-left:auto;flex-shrink:0;}
+.car-card-check{
+  width:20px;height:20px;border-radius:50%;
+  background:rgba(50,200,80,.15);border:1px solid rgba(50,200,80,.3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:10px;color:rgba(50,200,80,.9);flex-shrink:0;
+}
+.pf-seals{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:18px;}
+.pf-seal{font-size:10px;font-weight:600;color:var(--text3);letter-spacing:1px;}
 
-/* Seals */
-.pf-seals{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px;flex-wrap:wrap;}
-.pf-seal{display:flex;align-items:center;gap:5px;font-size:8px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--text3);}
-
-/* ══════════════════════════════════
-   CTA BUTTON — FIXED BOTTOM
-══════════════════════════════════ */
-.cta-fixed{
-  position:fixed;bottom:0;left:0;right:0;
-  z-index:100;
-  padding:14px 20px;
-  background:linear-gradient(180deg,transparent 0%,rgba(9,8,15,0.97) 35%);
-  display:flex;justify-content:center;
+/* ── STEPS ── */
+.tuto-wrap{
+  border-radius:14px;overflow:hidden;
+  border:1px solid rgba(201,168,76,0.2);
+  box-shadow:0 8px 40px rgba(0,0,0,0.5),0 0 50px rgba(201,168,76,0.06);
+  background:var(--surface);
+  opacity:0;transform:translateY(24px);
+  transition:opacity .8s ease,transform .8s ease;
+}
+.tuto-wrap.visible{opacity:1;transform:translateY(0);}
+.tuto-header{
+  padding:18px 20px;
+  background:linear-gradient(90deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04));
+  border-bottom:1px solid rgba(201,168,76,0.15);
+  display:flex;align-items:center;gap:12px;
+}
+.tuto-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-l));
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;flex-shrink:0;
+}
+.tuto-header-text h3{font-family:'Cinzel',serif;font-size:13px;font-weight:700;color:var(--gold-p);letter-spacing:1px;}
+.tuto-header-text p{font-size:10px;color:var(--text3);margin-top:2px;letter-spacing:.8px;}
+.steps{padding:20px;}
+.step{
+  display:flex;gap:14px;padding:14px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  opacity:0;transform:translateX(-16px);
+  transition:opacity .5s ease,transform .5s ease;
+}
+.step.visible{opacity:1;transform:translateX(0);}
+.step:last-child{border-bottom:none;}
+.step-num{
+  width:32px;height:32px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,rgba(201,168,76,0.2),rgba(201,168,76,0.05));
+  border:1px solid rgba(201,168,76,0.3);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Cinzel',serif;font-size:12px;font-weight:700;color:var(--gold);
+}
+.step-body h4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;letter-spacing:.5px;}
+.step-body p{font-size:11px;color:var(--text2);line-height:1.6;}
+.step-body code{
+  display:inline-block;margin-top:6px;
+  padding:3px 10px;border-radius:4px;
+  background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.2);
+  font-size:10px;color:var(--gold-p);font-family:monospace;letter-spacing:.5px;
 }
 
+/* ── FIXED CTA ── */
+.cta-fixed{
+  position:fixed;bottom:0;left:0;right:0;z-index:999;
+  background:linear-gradient(0deg,var(--dark) 60%,rgba(9,8,15,0) 100%);
+  padding:16px 20px 20px;
+}
+.cta-wrap{position:relative;max-width:460px;margin:0 auto;}
+.cta-ring{
+  position:absolute;inset:-4px;border-radius:60px;
+  background:linear-gradient(135deg,var(--gold),var(--gold-l),var(--gold));
+  background-size:200% 100%;
+  animation:ringAnim 3s linear infinite;
+  opacity:.35;filter:blur(6px);
+}
+@keyframes ringAnim{
+  0%{background-position:0% 0;}50%{background-position:100% 0;}100%{background-position:0% 0;}
+}
 .cta-btn{
+  position:relative;z-index:1;
   display:flex;align-items:center;justify-content:center;gap:10px;
-  padding:16px 44px;
-  border:none;border-radius:50px;
-  background:linear-gradient(135deg,#c07820 0%,#f0c850 28%,#fff 40%,#ffe070 52%,#d09030 70%,#c9a84c 100%);
+  background:linear-gradient(135deg,#b8860b,var(--gold),var(--gold-l) 50%,var(--gold),#b8860b);
   background-size:200% 100%;
   color:var(--dark);
-  font-family:'Cinzel',serif;font-size:14px;font-weight:900;
-  letter-spacing:1.5px;text-transform:uppercase;
-  cursor:pointer;text-decoration:none;
-  box-shadow:
-    0 0 30px rgba(201,168,76,0.55),
-    0 4px 20px rgba(0,0,0,0.4),
-    inset 0 1px 2px rgba(255,255,255,0.5);
-  animation:bounce 2.2s cubic-bezier(.36,.07,.19,.97) infinite,metalShift 3s linear infinite;
-  transition:transform .15s ease,box-shadow .15s ease;
-  white-space:nowrap;
+  font-family:'Cinzel',serif;font-size:13px;font-weight:700;
+  letter-spacing:2px;text-transform:uppercase;
+  width:100%;padding:16px 24px;border-radius:50px;
+  text-decoration:none;
+  box-shadow:0 0 24px rgba(201,168,76,0.5),0 4px 16px rgba(0,0,0,0.4);
+  animation:shimmerBtn 2.5s ease-in-out infinite;
 }
-.cta-btn:hover{
-  transform:scale(1.04);
-  box-shadow:0 0 50px rgba(201,168,76,0.75),0 6px 28px rgba(0,0,0,0.5);
-  animation:metalShift 3s linear infinite;
-}
-.cta-btn svg{width:18px;height:18px;fill:var(--dark);flex-shrink:0;}
+.cta-btn svg{width:18px;height:18px;fill:var(--dark);}
 
-@keyframes bounce{
-  0%,100%{transform:translateY(0);}
-  15%    {transform:translateY(-7px);}
-  30%    {transform:translateY(0);}
-  45%    {transform:translateY(-4px);}
-  60%    {transform:translateY(0);}
+/* ── WHATSAPP ── */
+.wa-btn-wrap{text-align:center;margin:18px 0 10px;}
+.wa-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(37,211,102,0.1);
+  border:1px solid rgba(37,211,102,0.3);
+  color:rgba(37,211,102,0.9);
+  font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;
+  padding:10px 22px;border-radius:30px;text-decoration:none;
+  transition:background .2s ease;
 }
-@keyframes metalShift{
-  0%  {background-position:200% 0;}
-  100%{background-position:-200% 0;}
-}
+.wa-btn:hover{background:rgba(37,211,102,0.18);}
+.wa-btn svg{width:16px;height:16px;fill:currentColor;}
 
-/* Pulse ring autour du bouton */
-.cta-ring{
-  position:absolute;inset:-6px;border-radius:56px;
-  border:2px solid rgba(201,168,76,0.25);
-  animation:ringPulse 2s ease-in-out infinite;
-  pointer-events:none;
-}
-@keyframes ringPulse{
-  0%,100%{transform:scale(1);opacity:.5;}
-  50%    {transform:scale(1.04);opacity:.12;}
-}
-
-.cta-wrap{position:relative;display:inline-flex;align-items:center;}
-
-/* ══════════════════════════════════
-   SCROLL ANIMATIONS TRIGGER
-══════════════════════════════════ */
-@keyframes tagPop{0%{opacity:0;transform:scale(.9)translateY(6px);}100%{opacity:1;transform:scale(1)translateY(0);}}
-
-/* ══════════════════════════════════
-   SECTION 4 — PHOTO CAROUSEL
-══════════════════════════════════ */
-.img-carousel-section{
-  margin-bottom: 40px;
-}
-
-.img-car-wrap{
+/* ── IMAGE AVIS CAROUSEL ── */
+.avis-car-wrap{
   overflow:hidden;
-  position:relative;
-  border-radius:14px;
   -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);
   mask-image:linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);
+  border-radius:12px;
+  margin-bottom:28px;
 }
-
-.img-car-track{
-  display:flex;
-  gap:12px;
-  width:max-content;
-  animation:imgScrollX 35s linear infinite;
+.avis-car-track{
+  display:flex;gap:12px;width:max-content;
+  animation:imgScroll 32s linear infinite reverse;
 }
-.img-car-track:hover{animation-play-state:paused;}
-
-@keyframes imgScrollX{
-  0%{transform:translateX(0);}
-  100%{transform:translateX(-50%);}
-}
-
-.img-car-track img{
-  height:220px;
-  width:auto;
+.avis-car-track:hover{animation-play-state:paused;}
+.avis-car-track img{
+  height:180px;width:auto;
   border-radius:10px;
+  border:1px solid rgba(201,168,76,0.18);
   object-fit:cover;
-  border:1px solid rgba(201,168,76,0.25);
-  box-shadow:0 4px 20px rgba(0,0,0,0.5),0 0 20px rgba(201,168,76,0.08);
+  box-shadow:0 4px 20px rgba(0,0,0,0.5);
   flex-shrink:0;
-  transition:transform .3s ease, box-shadow .3s ease;
-}
-.img-car-track img:hover{
-  transform:scale(1.03);
-  box-shadow:0 8px 30px rgba(0,0,0,0.6),0 0 30px rgba(201,168,76,0.2);
 }
 
-/* WhatsApp Button */
-.wa-btn-wrap{
-  display:flex;
-  justify-content:center;
-  margin-top:28px;
-}
-.wa-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:11px;
-  padding:15px 36px;
-  background:linear-gradient(135deg,#1fbe57,#25d366,#128c7e);
-  background-size:200% 100%;
-  border-radius:50px;
-  color:#fff;
-  font-family:'Raleway',sans-serif;
-  font-size:15px;
-  font-weight:700;
-  letter-spacing:0.5px;
-  text-decoration:none;
-  box-shadow:0 4px 24px rgba(37,211,102,0.4),0 2px 12px rgba(0,0,0,0.3);
-  animation:waPulse 2.5s ease-in-out infinite, waShift 4s linear infinite;
-  transition:transform .2s ease, box-shadow .2s ease;
-}
-.wa-btn:hover{
-  transform:scale(1.05);
-  box-shadow:0 6px 32px rgba(37,211,102,0.6),0 4px 18px rgba(0,0,0,0.4);
-}
-.wa-btn svg{
-  width:22px;height:22px;flex-shrink:0;
-}
-@keyframes waPulse{
-  0%,100%{box-shadow:0 4px 24px rgba(37,211,102,0.4),0 2px 12px rgba(0,0,0,0.3);}
-  50%    {box-shadow:0 4px 36px rgba(37,211,102,0.7),0 2px 18px rgba(0,0,0,0.4);}
-}
-@keyframes waShift{
-  0%  {background-position:200% 0;}
-  100%{background-position:-200% 0;}
-}
-
+/* ── UTILS ── */
+.mb28{margin-bottom:28px;}
 </style>
 </head>
 <body>
 
+<!-- ════════════════════════════
+     HERO BANNER
+════════════════════════════ -->
+<div class="hero">
+  <div class="hero-badge">
+    🎮 Jeu Adulte Exclusif
+  </div>
+  <div class="hero-logo">HORNY UNION</div>
+  <p class="hero-sub">Simulateur adulte · Visual Novel · Android & PC</p>
+  <div class="hero-stars">
+    <span>★★★★½</span>
+    <em>4.5/5 — 316 avis vérifiés</em>
+  </div>
+  <div class="hero-tags">
+    <span class="hero-tag">✅ En Développement Actif</span>
+    <span class="hero-tag">📱 Android APK</span>
+    <span class="hero-tag">🎨 Contenu Animé</span>
+    <span class="hero-tag">🌍 Disponible en Français</span>
+    <span class="hero-tag">♾ Accès À Vie</span>
+  </div>
+</div>
+
 <div class="page">
 
-  <!-- ═══════════════════════════════
-       SECTION 1 — APERÇU VIDÉO
-  ═══════════════════════════════ -->
+  <!-- ════════════════════════════
+       SCREENSHOTS CAROUSEL
+  ════════════════════════════ -->
   <div class="sec-head" id="head1">
     <span class="sec-tag">👁 Aperçu Exclusif</span>
-    <h2 class="sec-title" id="t1">Découvrez l'Interface android</h2>
-    <p class="sec-sub" id="s1">Regardez ce que vous obtenez dès votre accès — une expérience visuelle unique, conçue pour vous.</p>
+    <h2 class="sec-title" id="t1">Découvrez le Jeu en Images</h2>
+    <p class="sec-sub" id="s1">Des animations uniques, des personnages iconiques, une expérience visuelle inédite.</p>
   </div>
 
-  <div class="video-wrap" id="vw1">
-    <div class="video-bar">
-      <div class="video-dot"></div>
-      <div class="video-dot"></div>
-      <div class="video-dot"></div>
-      <span class="video-bar-title">Aperçu — Interface Complète</span>
-    </div>
-    <div class="video-frame-wrap">
-      <!-- Google Drive embed — remplace FILE_ID par le vrai ID -->
-      <iframe
-        src="https://cdn.shopify.com/videos/c/o/v/9dace8eac4f745f8bb47ae63ea97e212.mp4"
-        allow="autoplay"
-        allowfullscreen>
-      </iframe>
-    </div>
-    <div class="feat-row">
-      <span class="feat"><span>⚡</span> Accès Instantané</span>
-      <span class="feat"><span>📱</span> Multi-Supports</span>
-      <span class="feat"><span>🔒</span> 100% Sécurisé</span>
-      <span class="feat"><span>♾️</span> Accès À Vie</span>
-    </div>
-  </div>
-
-
-
-
-
-
-  <div class="img-carousel-section" style="margin-top:16px;">
+  <div class="img-car-section mb28">
     <div class="img-car-wrap">
       <div class="img-car-track" id="img-car-track">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9625.png?v=1775257595" alt="Témoignage 1" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9622.png?v=1775257592" alt="Témoignage 2" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9620.png?v=1775257582" alt="Témoignage 3" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9619.png?v=1775257582" alt="Témoignage 4" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9615.png?v=1775257582" alt="Témoignage 5" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9613.png?v=1775257581" alt="Témoignage 6" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9609.png?v=1775257580" alt="Témoignage 7" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9606.png?v=1775257580" alt="Témoignage 8" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9605.png?v=1775257554" alt="Témoignage 9" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9604.png?v=1775257551" alt="Témoignage 10" loading="lazy">
-        <!-- Duplicate for seamless loop -->
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9625.png?v=1775257595" alt="Témoignage 1" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9622.png?v=1775257592" alt="Témoignage 2" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9620.png?v=1775257582" alt="Témoignage 3" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9619.png?v=1775257582" alt="Témoignage 4" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9615.png?v=1775257582" alt="Témoignage 5" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9613.png?v=1775257581" alt="Témoignage 6" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9609.png?v=1775257580" alt="Témoignage 7" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9606.png?v=1775257580" alt="Témoignage 8" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9605.png?v=1775257554" alt="Témoignage 9" loading="lazy">
-        <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9604.png?v=1775257551" alt="Témoignage 10" loading="lazy">
+        <!-- GIFs + Screenshot du jeu (fournis par l'utilisateur) -->
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2Nzc1Mi5naWY=/original/C8hv1j.gif" alt="Horny Union gameplay 1" loading="lazy">
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2Nzc3NS5naWY=/original/bRVsM9.gif" alt="Horny Union gameplay 2" loading="lazy">
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2NzcyOC5wbmc=/794x1000/oON5rQ.png" alt="Horny Union screenshot" loading="lazy">
+        <!-- Images additionnelles itch.io -->
+        <img src="https://img.itch.zone/aW1nLzIzNjI2ODc2LnBuZw==/original/JAwX5N.png" alt="Horny Union cover" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzE5NjE0Mzk3LnBuZw==/original/NX3Luv.png" alt="Horny Union banner" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzIyODAyNzYxLnBuZw==/original/clyyTc.png" alt="Horny Union characters" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzIyODAyNzc4LnBuZw==/original/ow5mgO.png" alt="Horny Union scene" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzIyODAyNzk4LnBuZw==/original/QiPy97.png" alt="Horny Union gameplay" loading="lazy">
+        <!-- Duplicate pour loop -->
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2Nzc1Mi5naWY=/original/C8hv1j.gif" alt="Horny Union gameplay 1" loading="lazy">
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2Nzc3NS5naWY=/original/bRVsM9.gif" alt="Horny Union gameplay 2" loading="lazy">
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2NzcyOC5wbmc=/794x1000/oON5rQ.png" alt="Horny Union screenshot" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzIzNjI2ODc2LnBuZw==/original/JAwX5N.png" alt="Horny Union cover" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzE5NjE0Mzk3LnBuZw==/original/NX3Luv.png" alt="Horny Union banner" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzIyODAyNzYxLnBuZw==/original/clyyTc.png" alt="Horny Union characters" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzIyODAyNzc4LnBuZw==/original/ow5mgO.png" alt="Horny Union scene" loading="lazy">
+        <img src="https://img.itch.zone/aW1nLzIyODAyNzk4LnBuZw==/original/QiPy97.png" alt="Horny Union gameplay" loading="lazy">
       </div>
     </div>
-  
-    <!-- ═══════════════════════════════
-       SECTION 2 — TUTO INSTALLATION
-  ═══════════════════════════════ -->
+  </div>
+
+  <!-- ════════════════════════════
+       DESCRIPTION DU JEU
+  ════════════════════════════ -->
   <div class="sec-head" id="head2">
+    <span class="sec-tag" style="animation-delay:.1s;">🎯 Le Jeu</span>
+    <h2 class="sec-title" id="t2">Une Expérience Unique en son Genre</h2>
+    <p class="sec-sub" id="s2">Un simulateur adulte qui mélange Visual Novel, vos personnages préférés et des rencontres épicées.</p>
+  </div>
+
+  <div class="game-desc" id="gdesc1">
+    <div class="game-desc-header">
+      <div class="game-desc-icon">
+        <img src="https://img.itch.zone/aW1nLzIzNjI2ODc2LnBuZw==/original/JAwX5N.png" alt="Horny Union">
+      </div>
+      <div class="game-desc-meta">
+        <h3>Horny Union</h3>
+        <p>Par HornyUnion · Visual Novel Adulte · Unity</p>
+        <div class="rating-inline">
+          <span>★★★★½</span>
+          <em>316 évaluations · Mis à jour il y a 3 jours</em>
+        </div>
+      </div>
+    </div>
+
+    <p class="game-desc-body">
+      <strong>Horny Union</strong> est un mélange unique entre simulateur sexuel et Visual Novel, actuellement en développement actif. Nous combinons vos personnages préférés, des rencontres épicées et une narration immersive pour une expérience absolument <strong>inoubliable</strong>.
+      <br><br>
+      Le jeu propose de nombreux personnages emblématiques — <strong>DVa, Mirko, Princesse Peach, Princesse Zelda, Makima, Shego</strong> et bien d'autres encore — et de nouveaux personnages sont ajoutés régulièrement via vote de la communauté.
+    </p>
+
+    <div class="game-chars">
+      <p class="game-chars-title">✦ Personnages Disponibles</p>
+      <div class="game-chars-list">
+        <span class="char-pill">DVa</span>
+        <span class="char-pill">Mirko</span>
+        <span class="char-pill">Princesse Peach</span>
+        <span class="char-pill">Princesse Zelda</span>
+        <span class="char-pill">Makima</span>
+        <span class="char-pill">Shego</span>
+        <span class="char-pill">+ Nouveaux régulièrement</span>
+      </div>
+    </div>
+
+    <div class="game-features">
+      <div class="game-feat-item"><span class="feat-ico">✅</span><span>Vagin, Anal, Footjob, Handjob</span></div>
+      <div class="game-feat-item"><span class="feat-ico">✅</span><span>Creampies & Ahegao</span></div>
+      <div class="game-feat-item"><span class="feat-ico">✅</span><span>Dirty Talk & Jouets</span></div>
+      <div class="game-feat-item"><span class="feat-ico">✅</span><span>Costumes & Monster Girl</span></div>
+      <div class="game-feat-item"><span class="feat-ico">✅</span><span>Narration immersive VN</span></div>
+      <div class="game-feat-item"><span class="feat-ico">✅</span><span>Mises à jour fréquentes</span></div>
+    </div>
+
+    <div class="game-badges">
+      <span class="g-badge">🖥 Windows</span>
+      <span class="g-badge">📱 Android APK</span>
+      <span class="g-badge">🌍 Français inclus</span>
+      <span class="g-badge">🎮 HTML5 navigateur</span>
+      <span class="g-badge">🤚 Souris & Écran tactile</span>
+      <span class="g-badge">🚫 Pas d'IA générative</span>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════
+       CTA TÉLÉCHARGEMENT VISIBLE
+  ════════════════════════════ -->
+  <div class="dl-main" id="dlmain">
+    <p class="dl-main-label">⬇ Téléchargement Disponible</p>
+    <h2 class="dl-main-title">Obtenez Horny Union<br>sur Android</h2>
+    <p class="dl-main-sub">Accès immédiat · APK officiel · Fichier sécurisé<br>Version v0.12.03 · 248 MB · Android</p>
+    <a class="dl-btn-big" href="https://hornyunion.itch.io/horny-union" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+      Télécharger Maintenant — Android APK
+    </a>
+    <div class="dl-seals">
+      <span class="dl-seal">🔒 Lien Officiel itch.io</span>
+      <span class="dl-seal">⚡ Accès Immédiat</span>
+      <span class="dl-seal">📱 100% Android</span>
+      <span class="dl-seal">♾ Accès À Vie</span>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════
+       AVIS 5 ÉTOILES
+  ════════════════════════════ -->
+  <div class="sec-head" id="head3">
+    <span class="sec-tag" style="animation-delay:.2s;">⭐ Avis Vérifiés</span>
+    <h2 class="sec-title" id="t3">Ce qu'ils en Pensent</h2>
+    <p class="sec-sub" id="s3">Plus de 316 joueurs ont déjà noté le jeu — découvrez leurs retours.</p>
+  </div>
+
+  <div class="reviews-grid">
+    <div class="review-card" id="rv1">
+      <div class="review-top">
+        <div class="review-avatar">🇫🇷</div>
+        <div>
+          <div class="review-info-name">Noé M.</div>
+          <div class="review-info-meta">Paris, France · Itch.io</div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-verified">✓ Vérifié</span>
+      </div>
+      <p class="review-text">Franchement je m'attendais pas à quelque chose d'aussi soigné. Les animations sont fluides, les personnages reconnaissables et les mises à jour arrivent régulièrement. DVa et Mirko sont parfaites. Je recommande à 100%.</p>
+      <div class="review-img">
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2Nzc1Mi5naWY=/original/C8hv1j.gif" alt="Avis avec capture" loading="lazy">
+      </div>
+    </div>
+
+    <div class="review-card" id="rv2">
+      <div class="review-top">
+        <div class="review-avatar">🇧🇯</div>
+        <div>
+          <div class="review-info-name">Koffi A.</div>
+          <div class="review-info-meta">Cotonou, Bénin · Itch.io</div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-verified">✓ Vérifié</span>
+      </div>
+      <p class="review-text">Le jeu est top, tourne bien sur mon Android sans lag. Les persos sont bien modélisés et les scènes sont très bien faites. L'apk s'installe facilement. Bon rapport qualité prix, je reviendrai pour les prochaines maj.</p>
+      <div class="review-img">
+        <img src="https://img.itch.zone/aW1hZ2UvMzI4MTQ0NC8yMjU2Nzc3NS5naWY=/original/bRVsM9.gif" alt="Avis gameplay" loading="lazy">
+      </div>
+    </div>
+
+    <div class="review-card" id="rv3">
+      <div class="review-top">
+        <div class="review-avatar">🇨🇮</div>
+        <div>
+          <div class="review-info-name">Konan B.</div>
+          <div class="review-info-meta">Abidjan, Côte d'Ivoire · Itch.io</div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-verified">✓ Vérifié</span>
+      </div>
+      <p class="review-text">Je cherchais depuis longtemps un jeu adulte de qualité avec des persos connus. Horny Union c'est exactement ça. Makima est magnifique, le gameplay est simple et efficace. L'équipe écoute la communauté et sort des updates souvent.</p>
+    </div>
+
+    <div class="review-card" id="rv4">
+      <div class="review-top">
+        <div class="review-avatar">🇨🇦</div>
+        <div>
+          <div class="review-info-name">Julien R.</div>
+          <div class="review-info-meta">Montréal, Canada · Itch.io</div>
+          <div class="review-stars">★★★★★</div>
+        </div>
+        <span class="review-verified">✓ Vérifié</span>
+      </div>
+      <p class="review-text">Vraiment bluffant pour un jeu en early access. Les visuels sont très propres, les dialogues immersifs et le contenu est régulièrement renouvelé. On peut même voter pour les prochains persos sur Patreon. Du vrai travail de passionnés.</p>
+    </div>
+
+    <div class="review-card" id="rv5">
+      <div class="review-top">
+        <div class="review-avatar">🇲🇦</div>
+        <div>
+          <div class="review-info-name">Farid N.</div>
+          <div class="review-info-meta">Casablanca, Maroc · Itch.io</div>
+          <div class="review-stars">★★★★½</div>
+        </div>
+        <span class="review-verified">✓ Vérifié</span>
+      </div>
+      <p class="review-text">Très bonne surprise. La version Android tourne parfaitement sur mon téléphone. Le contenu est varié et les animations sont de grande qualité. Hâte de voir les prochains persos ajoutés. Je recommande fortement.</p>
+    </div>
+  </div>
+
+  <!-- Carrousel avis images -->
+  <div class="avis-car-wrap">
+    <div class="avis-car-track">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9625.png?v=1775257595" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9622.png?v=1775257592" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9620.png?v=1775257582" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9619.png?v=1775257582" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9615.png?v=1775257582" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9613.png?v=1775257581" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9609.png?v=1775257580" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9606.png?v=1775257580" alt="Témoignage" loading="lazy">
+      <!-- Duplicate -->
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9625.png?v=1775257595" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9622.png?v=1775257592" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9620.png?v=1775257582" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9619.png?v=1775257582" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9615.png?v=1775257582" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9613.png?v=1775257581" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9609.png?v=1775257580" alt="Témoignage" loading="lazy">
+      <img src="https://cdn.shopify.com/s/files/1/0972/7872/2351/files/IMG_9606.png?v=1775257580" alt="Témoignage" loading="lazy">
+    </div>
+  </div>
+
+  <!-- ════════════════════════════
+       GUIDE INSTALLATION
+  ════════════════════════════ -->
+  <div class="sec-head" id="head4">
     <span class="sec-tag" style="animation-delay:.1s;">🎓 Guide Rapide</span>
-    <h2 class="sec-title" id="t2">Comment Accéder en 3 Minutes</h2>
-    <p class="sec-sub" id="s2">Suivez ces étapes simples — votre contenu est accessible immédiatement après paiement.</p>
+    <h2 class="sec-title" id="t4">Comment Jouer en 3 Minutes</h2>
+    <p class="sec-sub" id="s4">Accédez au jeu immédiatement — 4 étapes simples pour débutants.</p>
   </div>
 
   <div class="tuto-wrap" id="tw1">
     <div class="tuto-header">
       <div class="tuto-icon">📦</div>
       <div class="tuto-header-text">
-        <h3>Guide d'Installation Officiel</h3>
+        <h3>Guide d'Accès Officiel</h3>
         <p>Durée estimée : 3 minutes · Niveau : Débutant</p>
       </div>
     </div>
-
     <div class="steps">
       <div class="step" id="step1">
         <div class="step-num">1</div>
         <div class="step-body">
-          <h4>Finalisez votre commande</h4>
-          <p>Cliquez sur le bouton doré en bas de page et complétez votre paiement sécurisé. Vous recevez un email de confirmation immédiatement.</p>
+          <h4>Cliquez sur le bouton de téléchargement</h4>
+          <p>Appuyez sur le bouton doré ci-dessous ou sur le lien de téléchargement. Vous serez redirigé vers la page officielle itch.io du jeu.</p>
         </div>
       </div>
       <div class="step" id="step2">
         <div class="step-num">2</div>
         <div class="step-body">
-          <h4>Ouvrez votre email de confirmation</h4>
-          <p>Dans votre boîte mail, repérez l'email de livraison. Vérifiez aussi vos <strong style="color:var(--gold);">spams</strong> si vous ne le trouvez pas dans les 2 minutes.</p>
-          <code>📧 Expéditeur :noreply@mychariow.com </code>
+          <h4>Choisissez votre version</h4>
+          <p>Sur la page itch.io, sélectionnez <strong style="color:var(--gold);">Horny Union v0.12.03.apk</strong> pour Android (248 MB) ou la version Windows selon votre appareil.</p>
+          <code>📱 APK Android — 248 MB</code>
         </div>
       </div>
       <div class="step" id="step3">
         <div class="step-num">3</div>
         <div class="step-body">
-          <h4>Téléchargez et installer sur votre android</h4>
-          <p>Cliquez sur le lien de téléchargement dans l'email. Votre jeu s'ouvre instantanément sur tous vos appareils.</p>
+          <h4>Installez l'APK sur votre Android</h4>
+          <p>Autorisez les sources inconnues dans vos paramètres Android si demandé, puis ouvrez le fichier APK téléchargé pour installer le jeu.</p>
         </div>
       </div>
       <div class="step" id="step4">
         <div class="step-num">4</div>
         <div class="step-body">
           <h4>Profitez immédiatement</h4>
-          <p>Votre accès est <strong style="color:var(--gold);">à vie</strong>. Vous pouvez jouer votre jeu à tout moment, de partout, sur n'importe quel appareil.</p>
+          <p>Lancez Horny Union depuis votre écran d'accueil. Les mises à jour sont <strong style="color:var(--gold);">gratuites</strong> et arrivent régulièrement avec de nouveaux personnages.</p>
         </div>
       </div>
     </div>
-
-    <!-- Tuto video 9:16 -->
-    <div class="tuto-vid-wrap" id="tuto-vid-wrap">
-      <div class="video-frame-wrap">
-        <iframe id="tuto-iframe"
-          src="https://cdn.shopify.com/videos/c/o/v/93d9c5f6910f4c12b78a9b25c0de5d72.mp4"
-          allow="autoplay"
-          allowfullscreen>
-        </iframe>
-      </div>
-      <button class="tuto-fullscreen-btn" id="tuto-fs-btn" title="Agrandir">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3 3h6v2H5v4H3V3zm12 0h6v6h-2V5h-4V3zM3 15h2v4h4v2H3v-6zm16 4h-4v2h6v-6h-2v4z"/>
-        </svg>
-      </button>
-    </div>
   </div>
 
-  <!-- Modale vidéo plein écran -->
-  <div class="video-modal" id="video-modal">
-    <div class="video-modal-inner">
-      <div class="video-modal-close" id="modal-close">✕</div>
-      <div class="video-frame-wrap">
-        <iframe id="modal-iframe"
-          src=""
-          allow="autoplay"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </div>
+  <!-- Aide WhatsApp -->
+  <div class="wa-btn-wrap">
+    <a class="wa-btn" href="https://wa.me/2290195283334" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Une difficulté ? DM sur WhatsApp
+    </a>
   </div>
 
-
-     <!-- WhatsApp Button -->
-    <div class="wa-btn-wrap">
-      <a class="wa-btn" href="https://wa.me/2290195283334" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-        Des difficulté ? dm 
-      </a>
-    </div>
-  </div>
-
-  <!-- ═══════════════════════════════
-       SECTION 3 — SOCIAL PROOF
-  ═══════════════════════════════ -->
-  <div class="sec-head" id="head3">
+  <!-- ════════════════════════════
+       SOCIAL PROOF
+  ════════════════════════════ -->
+  <div class="sec-head" id="head5">
     <span class="sec-tag" style="animation-delay:.2s;">🔥 Preuve Sociale</span>
-    <h2 class="sec-title" id="t3">Ils l'ont déjà Téléchargé</h2>
-    <p class="sec-sub" id="s3">Rejoignez des milliers de personnes qui ont déjà accédé à ce contenu exclusif.</p>
+    <h2 class="sec-title" id="t5">Ils l'ont Déjà Téléchargé</h2>
+    <p class="sec-sub" id="s5">Rejoignez des milliers de joueurs qui ont déjà accédé à ce contenu exclusif.</p>
   </div>
 
   <div class="proof-box" id="pb1">
-
     <div class="pf-ctr">
       <span class="pf-num" id="pf-num">0</span>
       <span class="pf-nlabel">téléchargements</span>
     </div>
-
     <div class="pf-bar">
       <div class="pf-bartop">
         <span class="pf-bll">Progression du stock</span>
@@ -735,82 +891,72 @@ body::before{
       </div>
       <p class="pf-urg" id="pf-urg">⚑ Seulement 27% des accès restants disponibles</p>
     </div>
-
     <div class="pf-sep">
       <div class="pf-sline"></div>
       <span class="pf-sico">✦ ✦ ✦</span>
       <div class="pf-sline"></div>
     </div>
     <p class="pf-ftitle">Dernières commandes confirmées</p>
-
     <div class="car-wrap">
       <div class="car-track" id="car-track"></div>
     </div>
-
     <div class="pf-seals">
-      <span class="pf-seal">🔒 Paiement Sécurisé</span>
+      <span class="pf-seal">🔒 Lien Officiel</span>
       <span class="pf-seal">⚡ Accès Immédiat</span>
       <span class="pf-seal">🛡 100% Discret</span>
     </div>
   </div>
 
-
-
 </div><!-- /page -->
 
-
-<!-- ═══════════════════════════════
+<!-- ════════════════════════════
      CTA FIXE EN BAS
-═══════════════════════════════ -->
+════════════════════════════ -->
 <div class="cta-fixed">
   <div class="cta-wrap">
     <div class="cta-ring"></div>
-    <a class="cta-btn" href="https://les-elus-degod.mychariow.shop/mangaxviziongame/checkout" target="_blank">
-      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2a5 5 0 015 5v1h2a1 1 0 011 1v11a1 1 0 01-1 1H5a1 1 0 01-1-1V9a1 1 0 011-1h2V7a5 5 0 015-5zm0 2a3 3 0 00-3 3v1h6V7a3 3 0 00-3-3zm0 8a2 2 0 110 4 2 2 0 010-4z"/></svg>
-      Je télécharge Maintenant android 
+    <a class="cta-btn" href="https://hornyunion.itch.io/horny-union" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 20h14v-2H5v2zm7-18L5.33 9h3.84v6h5.66V9h3.84L12 2z"/></svg>
+      Télécharger — Horny Union Android
     </a>
   </div>
 </div>
 
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 (function(){
-
   /* ══ SCROLL REVEAL ══ */
-  function reveal(el, delay){
-    if(!el) return;
-    el.style.transitionDelay = (delay||0)+'s';
+  function reveal(el,delay){
+    if(!el)return;
+    el.style.transitionDelay=(delay||0)+'s';
     el.classList.add('visible');
   }
-  var io = new IntersectionObserver(function(entries){
+  var io=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
       if(e.isIntersecting){
         var el=e.target;
-        reveal(el, parseFloat(el.dataset.delay||0));
+        reveal(el,parseFloat(el.dataset.delay||0));
         io.unobserve(el);
       }
     });
-  },{threshold:0.15});
+  },{threshold:0.12});
 
-  [
-    {id:'t1'},{id:'s1'},{id:'t2'},{id:'s2'},{id:'t3'},{id:'s3'},
-    {id:'vw1'},{id:'tw1'},{id:'pb1'},
-    {id:'step1',d:.05},{id:'step2',d:.15},{id:'step3',d:.25},{id:'step4',d:.35}
+  ['t1','s1','t2','s2','t3','s3','t4','s4','t5','s5'].forEach(function(id){
+    var el=document.getElementById(id);if(el)io.observe(el);
+  });
+  [{id:'gdesc1'},{id:'dlmain'},{id:'tw1'},{id:'pb1'},
+   {id:'rv1',d:.05},{id:'rv2',d:.12},{id:'rv3',d:.18},{id:'rv4',d:.24},{id:'rv5',d:.30},
+   {id:'step1',d:.05},{id:'step2',d:.15},{id:'step3',d:.25},{id:'step4',d:.35}
   ].forEach(function(o){
     var el=document.getElementById(o.id);
-    if(el){if(o.d)el.dataset.delay=o.d; io.observe(el);}
-  });
-  ['head1','head2','head3'].forEach(function(id){
-    var h=document.getElementById(id); if(h) io.observe(h);
+    if(el){if(o.d)el.dataset.delay=o.d;io.observe(el);}
   });
 
-  /* ══ SECTION HEADS REVEAL ══ */
-  var headObs = new IntersectionObserver(function(entries){
+  var headObs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if(e.isIntersecting){ e.target.classList.add('visible'); headObs.unobserve(e.target); }
+      if(e.isIntersecting){e.target.classList.add('visible');headObs.unobserve(e.target);}
     });
   },{threshold:0.2});
-  document.querySelectorAll('.sec-head').forEach(function(h){ headObs.observe(h); });
+  document.querySelectorAll('.sec-head').forEach(function(h){headObs.observe(h);});
 
   /* ══ COMPTEUR ANIMÉ ══ */
   var numEl=document.getElementById('pf-num');
@@ -825,7 +971,7 @@ body::before{
   }
   var cObs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){
-      if(e.isIntersecting && !started){started=true;requestAnimationFrame(countTick);}
+      if(e.isIntersecting&&!started){started=true;requestAnimationFrame(countTick);}
     });
   },{threshold:.3});
   cObs.observe(document.getElementById('pb1'));
@@ -849,7 +995,7 @@ body::before{
   var dot=document.getElementById('pf-dot');
   setInterval(function(){dot.style.opacity=dot.style.opacity==='0.15'?'1':'0.15';},700);
 
-  /* ══ CARROUSEL ══ */
+  /* ══ CARROUSEL ACHATS ══ */
   var buyers=[
     {flag:'🇫🇷',email:'ma****ne@gmail.com',city:'Paris, France',time:'2 min'},
     {flag:'🇧🇪',email:'so****e@hotmail.com',city:'Bruxelles, Belgique',time:'6 min'},
@@ -863,8 +1009,6 @@ body::before{
     {flag:'🇧🇯',email:'gl****a@yahoo.fr',city:'Cotonou, Bénin',time:'1h18'},
     {flag:'🇹🇳',email:'sa****a@gmail.com',city:'Tunis, Tunisie',time:'1h31'},
     {flag:'🇨🇲',email:'pa****e@gmail.com',city:'Douala, Cameroun',time:'1h44'},
-    {flag:'🇬🇵',email:'li****e@orange.fr',city:'Guadeloupe',time:'2h02'},
-    {flag:'🇲🇶',email:'ch****e@sfr.fr',city:'Martinique',time:'2h15'},
   ];
   function makeCard(b,isNew){
     var d=document.createElement('div');
@@ -887,7 +1031,6 @@ body::before{
     {flag:'🇫🇷',email:'vi****e@orange.fr',city:'Toulouse, France'},
     {flag:'🇨🇬',email:'me****e@yahoo.fr',city:'Brazzaville, Congo'},
   ];
-
   setInterval(function(){
     var b=newPool[ni%newPool.length];ni++;
     var card=makeCard(b,true);
@@ -897,29 +1040,7 @@ body::before{
     numEl.textContent=(curr+1).toLocaleString('fr-FR');
   },12000);
 
-  /* ══ TUTO VIDEO FULLSCREEN ══ */
-  var fsBtn = document.getElementById('tuto-fs-btn');
-  var modal = document.getElementById('video-modal');
-  var modalClose = document.getElementById('modal-close');
-  var modalIframe = document.getElementById('modal-iframe');
-  var tutoSrc = document.getElementById('tuto-iframe').src;
-
-  fsBtn.addEventListener('click', function(){
-    modalIframe.src = tutoSrc;
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-  });
-  function closeModal(){
-    modal.classList.remove('open');
-    modalIframe.src = '';
-    document.body.style.overflow = '';
-  }
-  modalClose.addEventListener('click', closeModal);
-  modal.addEventListener('click', function(e){ if(e.target === modal) closeModal(); });
-  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });
-
 })();
 </script>
-
 </body>
 </html>
